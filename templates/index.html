@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima Baque</title>
+    <link rel="icon" type="images/clima" href="{{ url_for('static', filename='images/arcoiris.ico') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div id="clouds">
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+        <div class="cloud"></div>
+    </div>
+    
+    <div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center">
+        <!-- Título con animación -->
+        <div class="titulo-animado text-center">
+            <h1 class="titulo">🌞 Consulta el Clima ☁️</h1>
+        </div>
+
+        <!-- Formulario de búsqueda -->
+        <div class="formulario mt-4">
+            <form method="POST" class="form-inline justify-content-center">
+                <input type="text" name="ciudad" class="form-control mr-2 cuadro" placeholder="Ingresa una ciudad..." required>
+                <button type="submit" class="btn btn-primary cuadro">Buscar 🌍</button>
+            </form>
+        </div>
+
+        <!-- Resultados con animación -->
+        {% if weather_data %}
+        <div class="resultados-container mt-5">
+            <div class="resultados p-4 cuadro">
+                {% if weather_data.error %}
+                    <div class="alert alert-danger">
+                        {{ weather_data.error }}
+                    </div>
+                {% else %}
+                    <h2 class="text-center mb-3">
+                        <img src="https://openweathermap.org/img/wn/{{ weather_data.icono }}@2x.png" alt="icono_clima">
+                        {{ weather_data.ciudad }}
+                    </h2>
+                    <ul class="list-unstyled">
+                        <li><strong>🌡️ Temperatura:</strong> {{ weather_data.temperatura }}°C</li>
+                        <li><strong>📜 Descripción:</strong> {{ weather_data.descripcion }}</li>
+                        <li><strong>🌍 Latitud:</strong> {{ weather_data.latitud }}</li>
+                        <li><strong>🌍 Longitud:</strong> {{ weather_data.longitud }}</li>
+                    </ul>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <footer class="bg-info text-center text-lg-start fixed-bottom">
+        <div class="text-center p-3" style="background-color:yellow">
+            2024 Copyright:
+            <a href="cv.html" target="_blank">Maria de los Angeles Baque Burgos</a>
+        </footer>
+</body>
+</html>

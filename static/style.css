@@ -1,0 +1,102 @@
+/* Estilo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    overflow: hidden; /* Ocultar scroll para el fondo */
+    background: #1e3a5f; /* Color base oscuro */
+}
+
+/* Fondo de nubes animadas */
+#clouds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Debajo del contenido */
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e3a5f, #162436);
+}
+
+.cloud {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 100px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+    animation: moveClouds 30s linear infinite;
+}
+
+.cloud:nth-child(1) {
+    top: 10%;
+    left: -20%;
+    animation-duration: 35s;
+    animation-delay: 0s;
+}
+
+.cloud:nth-child(2) {
+    top: 30%;
+    left: -30%;
+    width: 400px;
+    height: 200px;
+    animation-duration: 40s;
+    animation-delay: 5s;
+}
+
+.cloud:nth-child(3) {
+    top: 60%;
+    left: -15%;
+    width: 350px;
+    height: 175px;
+    animation-duration: 45s;
+    animation-delay: 10s;
+}
+
+.cloud:nth-child(4) {
+    top: 80%;
+    left: -25%;
+    width: 300px;
+    height: 150px;
+    animation-duration: 50s;
+    animation-delay: 15s;
+}
+
+/* Animación de movimiento de nubes */
+@keyframes moveClouds {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(150%);
+    }
+}
+
+/* Cuadros con interactividad */
+.cuadro {
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparente */
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cuadro:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 0, 0.8);
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}

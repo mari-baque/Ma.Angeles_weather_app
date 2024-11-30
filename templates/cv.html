@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profesional</title>
+    <link rel="icon" type="images/descarga" href="{{ url_for('static', filename='images/angeles.jpg') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        h2 {
+            border: 2px solid grey;
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin-top: 20px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .progress-bar {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .btn {
+            margin-right: 10px;
+        }
+
+        .list-group-item {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Maria de los Angeles Baque Burgos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#perfil">Perfil</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4" id="perfil">
+        <h2>Información Personal</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ url_for('static', filename='images/Baque.jpg') }}" alt="Foto de perfil" class="profile-pic">
+                    <div class="card-body">
+                        <h5 class="card-title">María de los Angeles Baque Burgos</h5>
+                        <p class="card-text">Correo: mdulce31@gmail.com<br>Teléfono: 0968333166<br>Dirección: Socio Vivienda 2 Mz 0203 V12</p>
+                        <a href="https://www.linkedin.com/in/maria-de-los-angeles-baque-burgos-27858680" class="btn btn-primary">Perfil de LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h3>Perfil Profesional</h3>
+                <p>Profesional con experiencia en ventas y atención al cliente, destacando en roles como cajera-vendedora polifuncional, promotora de ventas y coordinadora de ventas. Habilidades comprobadas en la gestión de operaciones de caja, promoción de productos y coordinación de equipos de ventas.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4" id="experiencia">
+        <h2>Experiencia Laboral</h2>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <h4>Intergrow S.A</h4>
+                <p><strong>Cargo:</strong> Coordinadora de Ventas canal retail</p>
+                <p><strong>Descripción:</strong> Ventas y asesoramiento de canal retail y venta online en cadenas de electrodomésticos en la línea de audio</p>
+                <p><strong>Inicio:</strong> Enero 2020 - <strong>Fin:</strong> Trabajo actual</p>
+            </li>
+            <li class="list-group-item">
+                <h4>Plasticaucho Industrial</h4>
+                <p><strong>Cargo:</strong> Líder de Almacén</p>
+                <p><strong>Descripción:</strong> Cajera Vendedora Polifuncional, Manejo de caja, atención al cliente, reposición de productos y mantenimiento del orden en el punto de venta.</p>
+                <p><strong>Inicio:</strong> Noviembre 2009 - <strong>Fin:</strong> Agosto 2014</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Educación</h2>
+        <div class="card">
+            <div class="card-body">
+                <h5>Instituto Técnico Superior Guayaquil</h5>
+                <p>Título: Bachiller en Ciencias</p>
+                <p>Fecha de Finalización: Febrero 2002</p>
+                <h5>Universidad de Guayaquil</h5>
+                <p>Carrera: Licenciatura en Gestión de la Información Gerencial</p>
+                <p>Fecha de Finalización: 4to Semestre</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Habilidades</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Gestión de caja</li>
+            <li class="list-group-item">Atención al cliente</li>
+            <li class="list-group-item">Promoción y Ventas</li>
+            <li class="list-group-item">Coordinación de equipo de trabajo</li>
+            <li class="list-group-item">Capacitación a la Fuerza de ventas</li>
+            <li class="list-group-item">Administración de inventarios</li>
+        </ul>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Idiomas</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Español - Nativo</li>
+            <li class="list-group-item">Inglés - Básico</li>
+        </ul>
+    </div>
+
+    <div class="container mt-4">
+        <h2>Cursos / Seminarios</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Curso</th>
+                    <th>Institución</th>
+                    <th>Horas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Asistente Administrativo</td>
+                    <td>Ecugenius S.A</td>
+                    <td>80 Horas</td>
+                </tr>
+                <tr>
+                    <td>Técnicas de cierre de ventas</td>
+                    <td>Cámara de Comercio de Guayaquil</td>
+                    <td>40 Horas</td>
+                </tr>
+                <tr>
+                    <td>Técnicas de Ventas</td>
+                    <td>Diners Club</td>
+                    <td>10 Horas</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Referencias Personales -->
+    <div class="container mt-4">
+        <h2>Referencias Personales</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Referencia</th>
+                    <th>Empresa</th>
+                    <th>Cargo</th>
+                    <th>Teléfono</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Marco Costa</td>
+                    <td>Open Audio</td>
+                    <td>Gerente Comercial</td>
+                    <td>0912345678</td>
+                </tr>
+                <tr>
+                    <td>Carlos Bernitt</td>
+                    <td>Deira S.A</td>
+                    <td>Gerente de Marketing</td>
+                    <td>0912345678</td>
+                </tr>
+                <tr>
+                    <td>Pedro Platon</td>
+                    <td>Open Mobile S.A</td>
+                    <td>Jefe de Servicio de Ensambles</td>
+                    <td>0912345678</td>
+            </table>
+</div>
+                <div class="container mt-4" id="contacto">
+                    <h2>Contacto</h2>
+                    <a href="https://www.linkedin.com/in/maria-de-los-angeles-baque-burgos-27858680" class="btn btn-outline-primary">
+                        <i class="bi bi-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/mari-baque" class="btn btn-outline-dark">
+                        <i class="bi bi-github"></i> GitHub
+                    </a>
+                    <a href="https://www.instagram.com/mangeles30/profilecard/?igsh=c2htZ25rYjU1ZGJq" class="btn btn-outline-danger">
+                        <i class="bi bi-instagram"></i> Instagram
+                    </a>
+                </div>
+</body>
